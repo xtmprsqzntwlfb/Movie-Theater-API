@@ -14,7 +14,43 @@ Django-based API for a simple movie theater service:
 
 ## Usage
 
+Clone the repo:
 ```
-python manage.py python manage.py createsuperuser --email admin@example.com --username admin
+git clone https://github.com/xtmprsqzntwlfb/Movie-Theater-API.git
+```
+Install virtual environment and activate it:
+```
+cd Movie-Theater-API/
+python3 -m venv venv
+source venv/bin/activate
+```
+Install requirements:
+```
+pip install django djangorestframework
+```
+Run server:
+```
+python manage.py runserver
+```
+Open a browser and go to ```127.0.0.1:8000/admin``` with admin/admin credentials
+
+Endpoints:
+
+```
+http://127.0.0.1:8000/api/v1/rooms
+http://127.0.0.1:8000/api/v1/movies
+http://127.0.0.1:8000/api/v1/timeslots
+http://127.0.0.1:8000/api/v1/tickets
 ```
 
+Details:
+
+```
+127.0.0.1:8000/api/v1/timeslots/<id>
+```
+
+Filters:
+
+```
+http://127.0.0.1:8000/api/v1/timeslots/?search=Black
+```
